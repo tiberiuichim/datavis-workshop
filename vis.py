@@ -1,4 +1,6 @@
 """ Utilities to integrate with pyLDAvis
+
+Most of the code lifted from pyLDAvis.sklearn, only difference is how we extract the vocabulary.
 """
 
 
