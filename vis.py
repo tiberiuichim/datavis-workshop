@@ -31,7 +31,7 @@ def _get_topic_term_dists(lda_model):
 
 
 def _get_vocab(id2term):
-    return id2term.values()
+    return list(id2term.values())
 
 
 def _extract_data(lda_model, dtm, id2term):
