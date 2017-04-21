@@ -5,6 +5,7 @@
 # make sure you have downloaded the language model
 # $ python -m spacy.en.download all
 
+from __future__ import unicode_literals
 import os
 import textacy
 
@@ -40,7 +41,7 @@ class EEACorpus(object):
             eeadocs, 0)
 
         # create textacy english Corpus
-        corpus = textacy.Corpus(u'en', texts=content_stream,
+        corpus = textacy.Corpus('en', texts=content_stream,
                                 metadatas=metadata_stream)
 
         return corpus
