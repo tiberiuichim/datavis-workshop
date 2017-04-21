@@ -1,0 +1,11 @@
+vis:
+   build: .
+   ports:
+     - "8888:8888"
+
+shell:
+   build: .
+   ports:
+     - "8890:8888"
+   command: bash -c "tail -f /dev/null"
+

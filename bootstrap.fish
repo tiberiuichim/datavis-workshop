@@ -5,12 +5,12 @@ URL="https://pypi.python.org/packages/d4/0c/9840c08189e030873387a73b90ada9818850
 
 curl $URL > /tmp/virtualenv.tgz
 tar xzf /tmp/virtualenv.tgz -C ./
-/usr/bin/python $VENV --clear ./
+/usr/bin/python3 $VENV --clear ./
 
 rm -rf ./virtualenv*
 bin/pip install -U pip
 
-CC=/usr/bin/gcc-5 bin/pip install cld2-cffi
+env CC=/usr/bin/gcc-5 bin/pip install cld2-cffi
 bin/pip install -r requirements.txt
 bin/python -m spacy download en
 bin/python load_eea_corpus.py
